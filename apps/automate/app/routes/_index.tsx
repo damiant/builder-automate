@@ -3,9 +3,9 @@ import { MarketingHome } from "@agent-native/toolkit/marketing";
 
 import { APP_TITLE } from "@/lib/app-config";
 
-const SEO_TITLE = APP_TITLE + " - Open Source AI app starter with actions";
+const SEO_TITLE = `${APP_TITLE} — Builder Factory workspace`;
 const SEO_DESCRIPTION =
-  "Open Source starter for agent-native apps with durable chat, shared actions, UI state, tools, and a backend your agent can extend.";
+  "Automate is the Builder Factory workspace app for agent chat, tasks, automations, shared actions, and workflows your agent can extend.";
 
 export function meta() {
   return [
@@ -23,12 +23,12 @@ export default function MarketingHomeRoute() {
   return (
     <MarketingHome
       appName={APP_TITLE}
-      tagline="Start from a chat-first agent-native app and add actions, screens, and workflows as you grow."
+      tagline="Build and ship agent-native apps from one workspace conversation."
       description={SEO_DESCRIPTION}
       valueProps={[
-        "Full-page chat with durable threads and tool call history",
-        "Use shared actions from chat, UI, HTTP, MCP, A2A, and CLI",
-        "Plug in your own agent runtime or use the included app-agent loop",
+        "Durable agent threads with tool history for day-to-day Builder work",
+        "Shared actions across chat, UI, HTTP, MCP, A2A, and sibling workspace apps",
+        "Extend Automate with new actions, screens, and workflows as products grow",
       ]}
       primaryActionHref={appPath("/home")}
       secondaryActionHref={appPath("/sign-in")}

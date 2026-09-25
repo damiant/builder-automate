@@ -44,7 +44,7 @@ const messages = {
     untitledChat: "Chat sem título",
   },
   navigation: {
-    chat: "Chat",
+    chat: "Automate",
     collapseSidebar: "Recolher barra lateral",
     database: "Banco de dados",
     expandSidebar: "Expandir barra lateral",

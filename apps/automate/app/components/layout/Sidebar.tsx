@@ -16,7 +16,10 @@ import {
 import {
   IconApps,
   IconClock,
+  IconClockPlay,
   IconEdit,
+  IconListCheck,
+  IconTimeline,
   IconLayoutSidebarLeftCollapse,
   IconLayoutSidebarLeftExpand,
   IconLoader2,
@@ -42,13 +45,65 @@ import { APP_TITLE } from "@/lib/app-config";
 import { visibleChatThreads } from "@/lib/sidebar-thread-state";
 import { cn } from "@/lib/utils";
 
-const CHAT_STORAGE_KEY = "chat";
+const CHAT_STORAGE_KEY = "automate";
 const CHAT_ACTIVE_THREAD_KEY = `agent-chat-active-thread:${CHAT_STORAGE_KEY}`;
 
 interface SidebarProps {
   collapsed?: boolean;
   collapsible?: boolean;
   onCollapsedChange?: (collapsed: boolean) => void;
+}
+
+const WORK_NAV = [
+  { to: "/automations", labelKey: "work.automationsNav", icon: IconClockPlay },
+  { to: "/tasks", labelKey: "work.tasksNav", icon: IconListCheck },
+  { to: "/log", labelKey: "work.logNav", icon: IconTimeline },
+] as const;
+
+function WorkSidebarNav({ collapsed }: { collapsed: boolean }) {
+  const t = useT();
+  const location = useLocation();
+
+  return (
+    <div
+      className={cn(
+        "flex flex-col gap-0.5",
+        collapsed ? "w-full items-center px-0" : "px-2 pb-2",
+      )}
+    >
+      {WORK_NAV.map(({ to, labelKey, icon: Icon }) => {
+        const active =
+          location.pathname === to || location.pathname.startsWith(`${to}/`);
+        const label = t(labelKey);
+        const button = (
+          <Link
+            to={to}
+            className={cn(
+              "flex items-center text-sidebar-foreground transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sidebar-ring",
+              collapsed
+                ? "size-10 justify-center rounded-md"
+                : "h-9 w-full gap-3 rounded-lg px-3 text-sm",
+              active && "bg-sidebar-accent text-sidebar-accent-foreground",
+            )}
+            aria-current={active ? "page" : undefined}
+            aria-label={collapsed ? label : undefined}
+          >
+            <Icon className="size-4 shrink-0" strokeWidth={1.8} />
+            <span className={collapsed ? "sr-only" : "truncate"}>{label}</span>
+          </Link>
+        );
+        if (collapsed) {
+          return (
+            <Tooltip key={to}>
+              <TooltipTrigger asChild>{button}</TooltipTrigger>
+              <TooltipContent side="right">{label}</TooltipContent>
+            </Tooltip>
+          );
+        }
+        return <div key={to}>{button}</div>;
+      })}
+    </div>
+  );
 }
 
 function threadTitle(thread: ChatThreadSummary, untitledLabel: string) {
@@ -406,7 +461,10 @@ function ChatThreadsSection({ collapsed }: { collapsed: boolean }) {
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <div className="px-2 pb-3">{newChatButton}</div>
+      <div className={cn("pb-2", collapsed ? "px-0" : "px-2")}>
+        {newChatButton}
+      </div>
+      <WorkSidebarNav collapsed={collapsed} />
       <ChatHistoryList
         sections={historySections}
         activeId={displayedActiveThreadId}
@@ -554,7 +612,7 @@ export function Sidebar({
           <OrgSwitcher
             reserveSpace
             compact={collapsed}
-            currentAppId="chat"
+            currentAppId="automate"
             className={
               collapsed
                 ? "size-8 bg-transparent p-0 hover:bg-sidebar-accent"

@@ -44,7 +44,7 @@ const messages = {
     untitledChat: "Unbenannter Chat",
   },
   navigation: {
-    chat: "Chat",
+    chat: "Automate",
     collapseSidebar: "Seitenleiste einklappen",
     database: "Datenbank",
     expandSidebar: "Seitenleiste ausklappen",

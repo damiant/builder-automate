@@ -1,33 +1,27 @@
-# Chat
+# Automate
 
-The minimal agent-native starter app — a clean, ChatGPT-style shell with chat at
-the center, durable threads, standard app navigation, auth, live sync, and
-actions. Start here when you want a real browser app to build on without
-committing to a domain template.
+Agent chat, tasks, automations, and operator workflows in the Builder Factory
+workspace. Open it at `/automate` on the workspace gateway when you want the
+primary conversation and automation surface.
 
-**Live app: [chat.agent-native.com](https://chat.agent-native.com)**
-
-Chat is the basic agent-native app starting point. It gives you the app-agent
-loop wired end to end and one example action, so you can add your own UI, data,
-and actions on top.
+Automate runs the app-agent loop end to end with actions you can extend with UI,
+data, and workspace workflows.
 
 ## Features
 
-- ChatGPT-style shell with a threads list and durable chat history.
-- Auth, live sync, and application state wired out of the box.
-- The action surface the agent and UI share, plus one example action to copy.
-- A minimal, brandable base for any domain app.
+- Conversation shell with a threads list and durable chat history
+- Tasks, automations, and run logs from the sidebar
+- Auth, live sync, and application state wired out of the box
+- The action surface the agent and UI share
 
 ## Develop locally
 
-Scaffold your own copy and run it:
+From the workspace root:
 
 ```bash
-npx --yes @agent-native/core@latest create my-app --standalone --template chat
-cd my-app
-corepack enable
 pnpm install
 pnpm dev
 ```
 
-Full docs: [agent-native.com/docs/template-chat](https://agent-native.com/docs/template-chat).
+Then open `/automate` on the workspace gateway (authenticated chat starts at
+`/automate/home`).

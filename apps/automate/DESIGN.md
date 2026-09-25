@@ -1,6 +1,6 @@
 # Visual Design Contract
 
-Chat is a quiet, full-canvas conversation workbench. AgentKit owns the
+Factory is a quiet, full-canvas conversation workbench. AgentKit owns the
 conversation primitives; the template owns the surrounding navigation and
 workspace chrome.
 

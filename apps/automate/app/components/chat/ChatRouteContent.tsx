@@ -56,7 +56,7 @@ function chatThreadPath(threadId: string | null) {
 
 // Module scope on purpose: AgentKitRoot memoizes the client on its options, so
 // a new callback each render would rebuild the client and drop the stream.
-const reportStreamIntegrity = createAgentKitIntegrityReporter("chat");
+const reportStreamIntegrity = createAgentKitIntegrityReporter("automate");
 
 export default function ChatRouteContent({
   initialThreadId,

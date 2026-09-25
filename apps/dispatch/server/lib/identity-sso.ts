@@ -164,7 +164,9 @@ function netlifyPreviewSiteName(appId: string): string | null {
   ) {
     return null;
   }
-  return appId === "chat" ? "agent-native-starter" : `agent-native-${appId}`;
+  return appId === "chat" || appId === "factory" || appId === "automate"
+    ? "agent-native-starter"
+    : `agent-native-${appId}`;
 }
 
 function isNetlifyPreviewOriginForApp(url: URL, appId?: string): boolean {

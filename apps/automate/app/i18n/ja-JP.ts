@@ -43,7 +43,7 @@ const messages = {
     untitledChat: "無題のチャット",
   },
   navigation: {
-    chat: "チャット",
+    chat: "Automate",
     collapseSidebar: "サイドバーを折りたたむ",
     database: "データベース",
     expandSidebar: "サイドバーを展開",

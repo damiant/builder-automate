@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "agent-native dev",
+    "dev:stop-stale": "bash scripts/stop-stale-dev-servers.sh",
     "build": "pnpm -r build",
     "prebuild": "agent-native doctor --strict",
     "doctor": "agent-native doctor",

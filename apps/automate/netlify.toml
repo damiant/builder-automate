@@ -1,7 +1,7 @@
 [build]
-command = "export DATABASE_URL=\"${NETLIFY_DATABASE_URL:-$DATABASE_URL}\" && APP_BASE_PATH=/chat VITE_APP_BASE_PATH=/chat NITRO_PRESET=netlify pnpm --filter chat build && if [ \"${CONTEXT:-}\" = \"production\" ]; then pnpm --filter chat migrate:production; fi"
-publish = "apps/chat/dist"
-functions = "apps/chat/.netlify/functions-internal"
+command = "export DATABASE_URL=\"${NETLIFY_DATABASE_URL:-$DATABASE_URL}\" && APP_BASE_PATH=/automate VITE_APP_BASE_PATH=/automate NITRO_PRESET=netlify pnpm --filter automate build && if [ \"${CONTEXT:-}\" = \"production\" ]; then pnpm --filter automate migrate:production; fi"
+publish = "apps/automate/dist"
+functions = "apps/automate/.netlify/functions-internal"
 
 [build.environment]
 GA_MEASUREMENT_ID = "G-ESF7FYXGN9"
@@ -9,8 +9,8 @@ GTM_CONTAINER_ID = "GTM-N3WSTXZ"
   NITRO_PRESET = "netlify"
   NPM_CONFIG_PRODUCTION = "false"
 
-  APP_BASE_PATH = "/chat"
-  VITE_APP_BASE_PATH = "/chat"
+  APP_BASE_PATH = "/automate"
+  VITE_APP_BASE_PATH = "/automate"
 [context.production.environment]
 AGENT_NATIVE_HOSTED_HARNESS = "true"
 AGENT_NATIVE_ENABLE_KEEP_WARM = "1"

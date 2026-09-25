@@ -258,6 +258,7 @@ describe("strict identity app registration", () => {
     const deployCallback = `https://${"a".repeat(24)}--agent-native-mail.netlify.app/_agent-native/identity/callback`;
     const starterCallback = `https://${"b".repeat(24)}--agent-native-starter.netlify.app/_agent-native/identity/callback`;
     const factoryCallback = `https://${"c".repeat(24)}--agent-native-factory.netlify.app/_agent-native/identity/callback`;
+    const automateCallback = `https://${"d".repeat(24)}--agent-native-automate.netlify.app/_agent-native/identity/callback`;
 
     expect(mod.isAllowedRedirectUri(deployCallback)).toBe(true);
     expect(
@@ -275,6 +276,13 @@ describe("strict identity app registration", () => {
       appId: "factory",
       clientId: "factory",
       origin: new URL(factoryCallback).origin,
+    });
+    expect(
+      mod.resolveIdentitySsoApp("automate", "automate", automateCallback),
+    ).toMatchObject({
+      appId: "automate",
+      clientId: "automate",
+      origin: new URL(automateCallback).origin,
     });
     expect(
       mod.resolveIdentitySsoApp(

@@ -72,7 +72,7 @@ agent should know.
   secrets/OAuth/runtime configuration and obvious placeholders.
 - Never hardcode `localhost`, `127.0.0.1`, or a dev port. Use relative workspace
   links like `/<app-name>`; the workspace gateway origin owns the port.
-- Do not implement a new app by adding routes, pages, or files to `apps/chat` or
+- Do not implement a new app by adding routes, pages, or files to `apps/automate` or
   another existing app unless the user explicitly asks to modify that app. Read
   `adding-workspace-apps` first.
 - Prefer framework defaults until the workspace has a real custom rule,

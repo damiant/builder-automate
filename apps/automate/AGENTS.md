@@ -1,9 +1,9 @@
-# Chat — Agent Guide
+# Automate — Agent Guide
 
-Chat is the minimal chat-first agent-native app. The public root is a marketing
-surface; the authenticated chat app starts at `/home`. Actions carry the real
-capabilities, and screens exist only where a workflow needs durable UI around
-the conversation.
+Automate is the workspace app for agent chat, tasks, and automations at
+`/automate` in this workspace. The public root is a marketing page; authenticated
+work starts at `/home`. Actions carry real capabilities, and screens exist only
+where a workflow needs durable UI around the conversation.
 
 ## Skills
 

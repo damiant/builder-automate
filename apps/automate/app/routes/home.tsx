@@ -5,9 +5,9 @@ import { useEffect, useRef, useState } from "react";
 import { APP_TITLE } from "@/lib/app-config";
 import { getChatHomeThreadId } from "@/lib/chat-home-thread";
 
-const SEO_TITLE = `${APP_TITLE} - Open Source AI app starter with actions`;
+const SEO_TITLE = `${APP_TITLE} — Builder Factory workspace`;
 const SEO_DESCRIPTION =
-  "Open Source starter for agent-native apps with durable chat, shared actions, UI state, tools, and a backend your agent can extend.";
+  "Factory is the Builder Factory home app: durable agent chat, shared actions, UI state, and a backend your agent can extend across workspace apps.";
 
 export function meta() {
   return [
@@ -31,7 +31,7 @@ export default function ChatRoute() {
   useEffect(() => {
     if (handoffStartedRef.current) return;
     handoffStartedRef.current = true;
-    markAgentChatHomeHandoff("chat");
+    markAgentChatHomeHandoff("automate");
     try {
       window.location.replace(appPath(`/chat/${encodeURIComponent(threadId)}`));
     } catch (error) {

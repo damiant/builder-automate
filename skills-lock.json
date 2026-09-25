@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "grill-me": {
+      "source": "BuilderIO/builder-agent-skills",
+      "sourceType": "github",
+      "skillPath": "grill-me/SKILL.md",
+      "computedHash": "2f899ce657175a0a82fa2c924c3982138bad15ece94336d897b05b7754f44895"
+    }
+  }
+}

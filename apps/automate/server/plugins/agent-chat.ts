@@ -8,7 +8,7 @@ import actionsRegistry from "../../.generated/actions-registry.js";
 
 const createWorkspaceAgentChatPlugin = (workspaceServer as Record<string, unknown>).createWorkspaceAgentChatPlugin;
 const options = {
-  appId: "chat",
+  appId: "automate",
   actions: loadActionsFromStaticRegistry(actionsRegistry),
 } satisfies AgentChatPluginOptions;
 

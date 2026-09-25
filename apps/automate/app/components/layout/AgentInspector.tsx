@@ -34,7 +34,7 @@ export function AgentInspector({
       position="right"
       chatViewTransition
       chatViewTransitionHandoff={chatHomeHandoffPending}
-      storageKey="chat"
+      storageKey="automate"
       browserTabId={TAB_ID}
       openOnChatRunning={chatHomeHandoffActive}
       onFullscreenRequest={openAskAgentFullscreen}

@@ -10,7 +10,7 @@ const enUS = {
     toggleTheme: "Toggle theme",
   },
   navigation: {
-    chat: "Chat",
+    chat: "Automate",
     observability: "Observability",
     database: "Database",
     team: "Team",
@@ -37,7 +37,7 @@ const enUS = {
     heroDescription:
       "Chat about anything. Add actions, components, pages, jobs, or your own agent backend when you want this app to do more.",
     suggestionCapabilities: "What can you do?",
-    suggestionCustomize: "Help me customize this chat app",
+    suggestionCustomize: "Help me customize Automate",
     suggestionActions: "Show me the actions and pages I can add",
     inspectEmptyState: "Ask the agent to inspect or change this app.",
     inspectSuggestionCapabilities: "What can you do here?",
@@ -79,7 +79,7 @@ export const messagesByLocale = {
       toggleTheme: "切换主题",
     },
     navigation: {
-      chat: "聊天",
+      chat: "Automate",
       observability: "可观测性",
       database: "数据库",
       team: "团队",
@@ -131,7 +131,7 @@ export const messagesByLocale = {
       toggleTheme: "Cambiar tema",
     },
     navigation: {
-      chat: "Chat",
+      chat: "Automate",
       observability: "Observabilidad",
       database: "Base de datos",
       team: "Equipo",
@@ -185,7 +185,7 @@ export const messagesByLocale = {
       toggleTheme: "Changer de thème",
     },
     navigation: {
-      chat: "Chat",
+      chat: "Automate",
       observability: "Observabilité",
       database: "Base de données",
       team: "Équipe",
@@ -240,7 +240,7 @@ export const messagesByLocale = {
       toggleTheme: "Theme wechseln",
     },
     navigation: {
-      chat: "Chat",
+      chat: "Automate",
       observability: "Observability",
       database: "Datenbank",
       team: "Team",
@@ -296,7 +296,7 @@ export const messagesByLocale = {
       toggleTheme: "テーマを切り替え",
     },
     navigation: {
-      chat: "チャット",
+      chat: "Automate",
       observability: "可観測性",
       database: "データベース",
       team: "チーム",
@@ -349,7 +349,7 @@ export const messagesByLocale = {
       toggleTheme: "테마 전환",
     },
     navigation: {
-      chat: "채팅",
+      chat: "Automate",
       observability: "관측성",
       database: "데이터베이스",
       team: "팀",
@@ -402,7 +402,7 @@ export const messagesByLocale = {
       toggleTheme: "Alternar tema",
     },
     navigation: {
-      chat: "Chat",
+      chat: "Automate",
       observability: "Observabilidade",
       database: "Banco de dados",
       team: "Equipe",
@@ -456,7 +456,7 @@ export const messagesByLocale = {
       toggleTheme: "थीम बदलें",
     },
     navigation: {
-      chat: "चैट",
+      chat: "Automate",
       observability: "ऑब्ज़र्वेबिलिटी",
       database: "डेटाबेस",
       team: "टीम",
@@ -509,7 +509,7 @@ export const messagesByLocale = {
       toggleTheme: "تبديل السمة",
     },
     navigation: {
-      chat: "المحادثة",
+      chat: "Automate",
       observability: "المراقبة",
       database: "قاعدة البيانات",
       team: "الفريق",

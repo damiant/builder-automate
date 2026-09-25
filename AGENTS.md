@@ -182,7 +182,7 @@ an additional locale or changelog.
   settings or `.env`; request a missing key through Dispatch's vault workflow
   instead.
 - Do not satisfy a new-app request by adding a route, page, component, or file
-  to `apps/chat` or another existing app unless the user explicitly asks to
+  to `apps/automate` or another existing app unless the user explicitly asks to
   modify that existing app.
 - Treat first-party apps such as Mail, Calendar, Analytics, Brain, Assets, and Dispatch as
   existing hosted/connected neighbors available through links and A2A/default

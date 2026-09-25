@@ -57,13 +57,13 @@ export function Layout({ children }: LayoutProps) {
   const isChatRoute =
     location.pathname === "/home" || location.pathname.startsWith("/chat/");
   const chatHomeHandoffActive = useAgentChatHomeHandoff({
-    storageKey: "chat",
+    storageKey: "automate",
     activePath: location.pathname,
     enabled: !isChatRoute,
   });
-  const chatHomeHandoffPending = isAgentChatHomeHandoffActive("chat");
+  const chatHomeHandoffPending = isAgentChatHomeHandoffActive("automate");
   useAgentChatHomeHandoffLinks({
-    storageKey: "chat",
+    storageKey: "automate",
     isChatPath: (pathname) =>
       pathname === "/home" || pathname.startsWith("/chat/"),
     requireActiveHandoff: true,

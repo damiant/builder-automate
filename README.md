@@ -71,11 +71,22 @@ pnpm repair:workspace-org -- --name "Example Co" --domain example.com --owner-em
 pnpm dev               # starts the workspace gateway; opens Dispatch when present
 ```
 
+If `pnpm dev` logs `PGlite database directory "./data/pglite" is already owned by
+process …`, an old app server is still holding the database lock (common after
+Ctrl+C or running an app directly on port 8100 while the workspace gateway is
+up). Nitro may restart in a loop until the lock is cleared. Stop stale servers
+(and stale lock files when the PID is gone), then start again:
+
+```bash
+pnpm dev:stop-stale
+pnpm dev
+```
+
 The dev gateway serves Dispatch at `/dispatch` when you keep the recommended
-Dispatch app selected, and every app at its own path such as `/chat`. It
+Dispatch app selected, and every app at its own path such as `/automate`. It
 watches `apps/`, so newly-created apps are detected without restarting
 `pnpm dev`. App servers start lazily the first time you visit their path. App
-links should stay relative, such as `/chat` or `/<app-id>`; do not hardcode
+links should stay relative, such as `/automate` or `/<app-id>`; do not hardcode
 localhost or dev ports because the active gateway origin owns the port.
 
 Dispatch vault keys are workspace-wide by default: every saved vault key is

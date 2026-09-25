@@ -42,7 +42,7 @@ const messages = {
     untitledChat: "बिना शीर्षक वाली चैट",
   },
   navigation: {
-    chat: "चैट",
+    chat: "Automate",
     collapseSidebar: "साइडबार संक्षिप्त करें",
     database: "डेटाबेस",
     expandSidebar: "साइडबार विस्तृत करें",

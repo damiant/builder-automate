@@ -40,7 +40,7 @@ const messages = {
     untitledChat: "未命名聊天",
   },
   navigation: {
-    chat: "聊天",
+    chat: "Automate",
     collapseSidebar: "收起側邊欄",
     database: "資料庫",
     expandSidebar: "展開側邊欄",

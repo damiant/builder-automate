@@ -44,7 +44,7 @@ const messages = {
     untitledChat: "제목 없는 채팅",
   },
   navigation: {
-    chat: "채팅",
+    chat: "Automate",
     collapseSidebar: "사이드바 접기",
     database: "데이터베이스",
     expandSidebar: "사이드바 펼치기",

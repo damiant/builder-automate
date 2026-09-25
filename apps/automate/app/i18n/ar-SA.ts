@@ -42,7 +42,7 @@ const messages = {
     untitledChat: "محادثة بلا عنوان",
   },
   navigation: {
-    chat: "المحادثة",
+    chat: "Automate",
     collapseSidebar: "طي الشريط الجانبي",
     database: "قاعدة البيانات",
     expandSidebar: "توسيع الشريط الجانبي",
